@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar bg-dark mb-5">
+        <a href="#" class="navbar-brand">Reddit App</a>
+    </nav>
+    <div class="container" id="search-container">
+        <form id="search-form">
+            <div class="form-group">
+                <input type="text" id="search-input" class="form-control mb-3" placeholder="Search Term...">
+            </div>
+            <div class="form-check form-check-inline">
+                Sort By: 
+                <input type="radio" name="sortby" value="relevance" class="form-check-input">
+                <label class="form-check-label">Relevance</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" name="sortby" value="new" class="form-check-input" checked>
+                <label class="form-check-label">New</label>
+            </div>
+            <h5>Limit: </h5>
+            <div class="form-group">
+                <select name="limit" id="limit" class="form-control">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+        </form>
+        <div id="results"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
